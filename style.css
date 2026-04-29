@@ -1,0 +1,111 @@
+@font-face {
+  font-family: junegull;
+  src: url(assets/junegull\ rg.ttf);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100vh;
+  margin:0;
+  background-image: url("https://alexmayerhoffer.github.io/Game-Of-Life/assets/leaf_pattern.jpg");
+  background-color: green;
+  background-blend-mode: multiply;
+  background-size: 200px;
+}
+
+#control_panel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding:1em;
+  gap:2em;
+  margin: 1em 0;
+}
+
+#game_board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90vw;
+  align-items:stretch;
+  
+}
+
+#game_board_bg {
+  background-color: black;
+  padding: 0.5em;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.cell {
+  width: 2%;
+  aspect-ratio: 1/1;
+  box-sizing: border-box;
+  background-color:rgb(164, 219, 121);
+  /* margin: 1px; */
+}
+
+body > h1 {
+  color: rgb(164, 219, 121);
+  font-family:junegull, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 2em;
+  letter-spacing: 0.3em;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0,0,0,0.3);
+  height: 2.5em;
+  margin: 0;
+  line-height: 2.5em;
+}
+
+#iterations {
+  font-size: 1.5em;
+}
+
+.slider {
+  /* -webkit-appearance: none;
+  -moz-appearance: none; */
+  appearance: none;
+  width: 20rem;
+  /* border: 0.5em solid rgba(0,0,0,0.3); */
+  background: rgb(164, 219, 121);
+  outline: none;
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  border-radius: 1rem;
+}
+
+.slider:hover, .button:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  appearance: none;
+  background: green;
+  width:1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  border: 0.3rem solid rgba(0,0,0,0.3);
+}
+
+.button {
+  border-radius: 0.5rem;
+  padding:1rem;
+  width: 10rem;
+  font-family: junegull;
+  font-size: 1rem;
+  color: green;
+  background-color: rgb(164, 219, 121);
+  opacity: 0.7;
+  border: none;
+}
+
+.button:disabled {
+  opacity:0.7;
+}
